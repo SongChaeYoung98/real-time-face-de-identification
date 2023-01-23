@@ -8,6 +8,6 @@
 - Python 3.8
 
 # Installation
-: Tensorflow_gpu-2.5.0
+: [Tensorflow_gpu-2.5.0](https://www.tensorflow.org/install/source_windows#tested_build_configurations)
 - CUDA 11.2
 - cuDNN 8.1
