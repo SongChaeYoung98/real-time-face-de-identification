@@ -1,10 +1,10 @@
 '''
 __author__ = 'Song Chae Young'
-__date__ = 'Jan.18, 2023'
+__date__ = 'Jan.23, 2023'
 __email__ = '0.0yeriel@gmail.com'
 __fileName__ = 'real-time-de-identification.py'
 __github__ = 'SongChaeYoung98'
-__status__ = 'Development'
+__status__ = 'Production'
 '''
 
 import cv2
@@ -86,48 +86,69 @@ while True:
     for (x, y, w, h) in faces:
         face_image = get_extended_image(frame, x, y, w, h, 0.5)
 
-
-
-        # <de-identification>
-        # 1. gaussian_filter() -> face_blurred
-        face_blurred = frame  # add
-        face_blurred[y:y+h, x:x+w] = gaussian_filter(face_blurred[y:y+h, x:x+w], 10)  # add
-
-        # 2. cv2.blur() -> cv2_blur (expected)
-        cv2_blur = frame  # add
-        cv2_blur[y:y + h, x:x + w] = cv2.blur(cv2_blur[y:y+h, x:x+w])  # add
-
-        # 3. cv2.GaussianBlur(src, (0, 0), sigma) -> cv2_Gau_blur (expected)
-
-
-
-
-
         # Predict Result
         result = face_classifier.predict(face_image)
         prediction = class_names[np.array(
             result[0]).argmax(axis=0)]  # predicted class
         confidence = np.array(result[0]).max(axis=0)  # degree of confidence
 
+        # Draw a rectangle around the face
         if prediction == 'me':
+            # <de-identification>
+            # Select One Option You Want, Then Delete the Other Options
+
+            # Opt 1. gaussian_filter() : face_blurred
+            face_blurred = frame
+            face_blurred[y:y + h, x:x + w] = gaussian_filter(face_blurred[y:y + h, x:x + w], 10)
+
+            # Opt 2. cv2.blur() : cv2_blur
+            cv2_blur = frame
+            cv2_blur[y:y + h, x:x + w] = cv2.blur(cv2_blur[y:y + h, x:x + w], (30, 30))
+
+            # Opt 3. cv2.GaussianBlur() : cv2_Gau_blur
+            cv2_Gau_blur = frame
+            cv2_Gau_blur[y:y + h, x:x + w] = cv2.GaussianBlur(cv2_Gau_blur[y:y + h, x:x + w], (9, 9), 10)
+
+            # Opt 4. Resize the image : mosaic
+            if len(faces):
+                for (x, y, w, h) in faces:
+                    mosaic = frame[y:y + h, x:x + w]
+                    mosaic = cv2.resize(mosaic, dsize=(0, 0), fx=0.04, fy=0.04)  # Reduction
+                    mosaic = cv2.resize(mosaic, (w, h), interpolation=cv2.INTER_AREA)  # Expansion
+                    frame[y:y + h, x:x + w] = mosaic
+
             color = GREEN
+
+            # Insert the Option You Choose
+            cv2.rectangle(mosaic,  # Original: frame
+                          (x, y),
+                          (x + w, y + h),
+                          color,
+                          2)  # thickness in px
+            cv2.putText(frame,
+                        # text to put
+                        "{:6} - {:.2f}%".format(prediction, confidence * 100),
+                        (x, y),
+                        cv2.FONT_HERSHEY_PLAIN,  # font
+                        2,  # fontScale
+                        color,
+                        2)  # thickness in px
         else:
             color = RED
-
-        # Draw a rectangle around the face
-        cv2.rectangle(face_blurred,  # frame: 원본 / face_blurred: 변경
-                      (x, y),  # start_point
-                      (x+w, y+h),  # end_point
-                      color,
-                      2)  # thickness in px
-        cv2.putText(frame,
-                    # text to put
-                    "{:6} - {:.2f}%".format(prediction, confidence*100),
-                    (x, y),
-                    cv2.FONT_HERSHEY_PLAIN,  # font
-                    2,  # fontScale
-                    color,
-                    2)  # thickness in px
+            # Draw a rectangle around the face
+            cv2.rectangle(frame,
+                          (x, y),
+                          (x + w, y + h),
+                          color,
+                          2)  # thickness in px
+            cv2.putText(frame,
+                        # text to put
+                        "{:6} - {:.2f}%".format(prediction, confidence * 100),
+                        (x, y),
+                        cv2.FONT_HERSHEY_PLAIN,  # font
+                        2,  # fontScale
+                        color,
+                        2)  # thickness in px
 
     # Display
     cv2.imshow("Real-time Face detector", frame)
