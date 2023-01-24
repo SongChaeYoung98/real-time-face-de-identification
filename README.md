@@ -5,7 +5,6 @@
 
 # Project Structure
 ```
-.
 └── real-time-face-de-identification
     ├── datasets
     │   ├── etc
