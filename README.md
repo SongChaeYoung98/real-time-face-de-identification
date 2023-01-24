@@ -3,6 +3,7 @@
  
 # Demonstration
 
+
 # Project Structure
 ```
 real-time-face-de-identification
@@ -24,6 +25,8 @@ real-time-face-de-identification
 ├── classifier_model_comparison.py : Build 5 types of models and compare.
 └── real-time-de-identification.py : De-identify a specific person's face in real time.
 ```
+# Datasets
+- [Kaggle - Human Faces](https://www.kaggle.com/datasets/ashwingupta3012/human-faces)
 
 # Installation
 : [Tensorflow_gpu-2.5.0](https://www.tensorflow.org/install/source_windows#tested_build_configurations)
@@ -44,6 +47,7 @@ real-time-face-de-identification
 
 # Development Environment
 - PyCharm 2020.2.3
+- VM: Anaconda3
 - CPU: Intel(R) Core(TM) i7-7700
 - GPU: NVIDIA GeForce GTX 1060 6GB
 - OS: Window 10 x64
