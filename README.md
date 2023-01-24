@@ -7,7 +7,7 @@
 
 # Author
 <img src="" width=100>
-[SongChaeYoung98](https://www.github.com/SongChaeYoung98)
+ [SongChaeYoung98](https://github.com/SongChaeYoung98)
 
 # Installation
 : [Tensorflow_gpu-2.5.0](https://www.tensorflow.org/install/source_windows#tested_build_configurations)
