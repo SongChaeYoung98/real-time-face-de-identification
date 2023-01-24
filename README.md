@@ -29,7 +29,7 @@ real-time-face-de-identification
 - [Kaggle - Human Faces](https://www.kaggle.com/datasets/ashwingupta3012/human-faces)
 
 # Installation
-[<Tensorflow_gpu-2.5.0>](https://www.tensorflow.org/install/source_windows#tested_build_configurations)
+[Tensorflow_gpu-2.5.0](https://www.tensorflow.org/install/source_windows#tested_build_configurations)
 - CUDA 11.2
 - cuDNN 8.1
 
