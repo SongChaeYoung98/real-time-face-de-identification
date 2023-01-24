@@ -5,9 +5,6 @@
 
 # Project Structure
 
-# Author
-[SongChaeYoung98](https://github.com/SongChaeYoung98)
-
 # Installation
 : [Tensorflow_gpu-2.5.0](https://www.tensorflow.org/install/source_windows#tested_build_configurations)
 - CUDA 11.2
