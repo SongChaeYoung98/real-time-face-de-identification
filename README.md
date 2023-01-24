@@ -5,24 +5,24 @@
 
 # Project Structure
 ```
-└── real-time-face-de-identification
-    ├── datasets
-    │   ├── etc
-    │   ├── face_dataset_test_images
-    │   │   ├── me
-    │   │   └── not_me
-    │   ├── face_dataset_train_aug_images
-    │   │   ├── me
-    │   │   └── not_me
-    │   └── face_dataset_train_images
-    │       ├── me
-    │       └── not_me
-    ├── models
-    ├── All Installed Package Versions.txt
-    ├── README.md
-    ├── classifier.py : Build Your Own Classifier
-    ├── classifier_model_comparison.py : Build 5 types of models and compare.
-    └── real-time-de-identification.py : De-identify a specific person's face in real time.
+real-time-face-de-identification
+├── datasets
+│   ├── etc
+│   ├── face_dataset_test_images
+│   │   ├── me
+│   │   └── not_me
+│   ├── face_dataset_train_aug_images
+│   │   ├── me
+│   │   └── not_me
+│   └── face_dataset_train_images
+│       ├── me
+│       └── not_me
+├── models
+├── All Installed Package Versions.txt
+├── README.md
+├── classifier.py : Build Your Own Classifier
+├── classifier_model_comparison.py : Build 5 types of models and compare.
+└── real-time-de-identification.py : De-identify a specific person's face in real time.
 ```
 
 # Installation
