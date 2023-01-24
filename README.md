@@ -18,9 +18,9 @@
 - seaborn
 - tensorflow(gpu)>=2.5.0
 
-
-
-
-
 # Development Environment
 - Pycharm 2020.2.3
+- CPU: Intel(R) Core(TM) i7-7700
+- GPU: NVIDIA GeForce GTX 1060 6GB
+- OS: Window 10 x64
+- RAM: 16GB
