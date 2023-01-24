@@ -4,7 +4,7 @@
 # Demonstration
 
 # Project Structure
---
+---
 **NOTE**
 .
 └── real-time-face-de-identification  
@@ -25,7 +25,7 @@
     ├── classifier.py : Build Your Own Classifier  
     ├── classifier_model_comparison.py : Build 5 types of models and compare.  
     └── real-time-de-identification.py : De-identify a specific person's face in real time. 
---
+---
 
 # Installation
 : [Tensorflow_gpu-2.5.0](https://www.tensorflow.org/install/source_windows#tested_build_configurations)
