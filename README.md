@@ -3,7 +3,7 @@
  
 # Demonstration
 ![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/93585651/214617538-57715bec-05c6-416f-8117-dc8e7ff94927.gif)
-Face detection was not smooth, so some frames were covered with pictures.
+Face detection is not smooth, so I covered some frames with image.
 
 # Project Structure
 ```
