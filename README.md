@@ -44,6 +44,14 @@ real-time-face-de-identification
 - seaborn
 - tensorflow(gpu)>=2.5.0
 
+# models
+- VGG16
+- ResNet50: 
+- ResNet152
+- Xception
+- MobileNet
+- Own Classifier
+
 # Language
 - Python 3.8
 
