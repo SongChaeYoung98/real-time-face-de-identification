@@ -28,7 +28,6 @@ real-time-face-de-identification
 # Datasets
 - [Kaggle - Human Faces](https://www.kaggle.com/datasets/ashwingupta3012/human-faces)
 - Selfies
-- Web-Scraped photos of 'New Jeans - Daniel'
 
 # Installation
 [Tensorflow_gpu-2.5.0](https://www.tensorflow.org/install/source_windows#tested_build_configurations)
