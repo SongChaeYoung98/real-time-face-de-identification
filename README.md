@@ -2,7 +2,7 @@
  De-identification of a Human's Face in Real-Time with tensorflow and keras
  
 # Demonstration
-
+![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/93585651/214617538-57715bec-05c6-416f-8117-dc8e7ff94927.gif)
 
 # Project Structure
 ```
