@@ -22,8 +22,8 @@ real-time-face-de-identification
 ├── All Installed Package Versions.txt
 ├── README.md
 ├── classifier.py : Build Your Own Classifier
-├── classifier_model_comparison.py : Build 5 types of models and compare.
-└── real-time-de-identification.py : De-identify a specific person's face in real time.
+├── classifier_model_comparison.py : Build 5 types of models and compare
+└── real-time-de-identification.py : De-identify a specific person's face in real time
 ```
 # Datasets
 - [Kaggle - Human Faces](https://www.kaggle.com/datasets/ashwingupta3012/human-faces)
